@@ -1,16 +1,17 @@
 'use client';
 import { navbarSection } from '@/lib/content/navbar';
-import { author } from '@/lib/content/portfolio';
 import useWindowWidth from '@/lib/hooks/use-window-width';
 import { getBreakpointsWidth } from '@/lib/utils/helper';
 
-import { Button, DarkModeButton, Link as CLink, NavButton } from '@/components';
+import {Button, Link as CLink, NavButton } from '@/components';
 
 import { fadeIn, slideIn } from '@/styles/animations';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
 
 /**
  * Hides the navbar while scrolling down
@@ -93,7 +94,11 @@ const Navbar = () => {
     >
       <h1 className="relative text-2xl capitalize font-signature text-accent group top-1">
         <Link href="/#hero" className="block">
-          {author.name}
+      
+
+
+          <Image src="/logo3.png" width={50} height={30} alt="Logo" />
+
           <div className="absolute bottom-1.5 left-0 h-[1px] w-0 group-hover:w-full bg-accent duration-300"></div>
         </Link>
       </h1>
@@ -137,7 +142,7 @@ const Navbar = () => {
                   {cta.title}
                 </Button>
               )}
-              <DarkModeButton
+              {/* <DarkModeButton
                 onClick={() => setNavbarCollapsed(false)}
                 variants={slideIn({
                   delay: ANIMATION_DELAY + (navLinks.length + 1) / 10,
@@ -145,7 +150,7 @@ const Navbar = () => {
                 })}
                 initial="hidden"
                 animate="show"
-              />
+              /> */}
             </div>
           </ul>
         </nav>

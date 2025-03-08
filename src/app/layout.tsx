@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   ],
   description: seoData.description,
-  keywords: seoData.keywords.join(','),
+  keywords: (seoData.keywords as string[]).join(','), // Use type assertion if necessary
   metadataBase: new URL(seoData.url),
   alternates: {
     canonical: seoData.url,

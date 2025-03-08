@@ -3,7 +3,7 @@ import { aboutSection } from '@/lib/content/about';
 import { author } from '@/lib/content/portfolio';
 import { getId } from '@/lib/utils/helper';
 
-import { AuthorImage, Link, ListItem, Wrapper } from '@/components';
+import { AuthorImage, ListItem, Wrapper } from '@/components';
 
 import { getSectionAnimation } from '@/styles/animations';
 
@@ -21,36 +21,17 @@ const About = () => {
   return domLoaded ? (
     <Wrapper id="about" {...getSectionAnimation}>
       <h2 className="heading-secondary">{title}</h2>
-      <main className="flex flex-col items-center gap-16 lg:items-start lg:flex-row">
+      <main className="flex flex-col items-center gap-16 lg:items-start lg:flex-row border-none">
         <div className="space-y-4 lg:w-3/5">
           <p>
-            Hi, my name is Vatsal Singh, a first-year MCA student at{' '}
-            <Link
-              href="https://bhu.ac.in/"
-              target="_blank"
-              className="text-accent"
-            >
-              Banaras Hindu University
-            </Link>
-            .<br /> I'm an Artist as well as crazy full stack web developer who
-            wants to explore every tech stack.
+            Hi, my name is Wedyan, I am an experienced Front-End Developer and Integration Specialist with a strong freelance background, having successfully collaborated with numerous clients and government agencies.
+           
+            <br /><br></br>
+            I specialize in creating intuitive and responsive web applications using modern technologies, My skills in transforming client requirements into seamless digital experiences ensure optimal performance across devices.   
+
           </p>
-          <p>
-            Fast-forward to today, and I've had the privilege of working at a
-            start-up -{' '}
-            <Link
-              href="https://www.pixelwand.live/"
-              target="_blank"
-              className="text-accent"
-            >
-              Pixelwand
-            </Link>
-            .
-          </p>
-          <p>
-            My main focus these days is learning mobile development and finding
-            a decent job.
-          </p>
+       
+           
 
           {list && (
             <>
