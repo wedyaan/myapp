@@ -30,6 +30,6 @@
     "src/**/*.tsx",
     ".next/types/**/*.ts",
     "src/containers/About.tsx"
-  ],
+, "app/layout.tsx", "app/app.tsx"  ],
   "exclude": ["node_modules"]
 }
